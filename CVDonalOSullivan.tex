@@ -1,0 +1,170 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+%
+% (c) 2012 Scott Clark <sc932@cornell.edu> cam.cornell.edu/~sc932
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+\usepackage{hyperref}
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand\tab[1][0.5cm]{\hspace*{#1}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Donal O'Sullivan}\\
+(086) 2633643 & osulld13@tcd.ie \\
+7 Fanagh Green, Tirmoghan, Donadea, Co.Kildare, W91 X9V3 &
+ie.linkedin.com/in/osulld13
+\end{tabular*}
+\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{\textbf{Education}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Trinity College, Dublin} (2012 - 2016)\\
+
+(BA) Computer Science and Business, II.I \\~\\
+
+\textbf{Areas of Study:} Software Engineering, Operating Systems, Data Structures \& Algorithms, Database Design, Concurrent Systems, Compiler Design, Distributed Systems, Mathematics, Management.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{\textbf{Work Experience}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Guidewire Software}, Ballycoolin Industrial Estate, Dublin 15 \hfill \textit{(September 2017 - Present)}\\
+\textit{Software Consultant}
+\vspace{-2mm}
+\begin{itemize}
+	\itemsep0em
+	\item Developing tailored front end systems for the Guidewire insurance platform to meet the needs of specific customers.
+\end{itemize}
+
+
+\textbf{Tapadoo}, Strand Street Great, North City, Dublin 1 \hfill \textit{(May 2016 - August 2017)}\\
+\textit{Android Mobile Application Developer}
+\vspace{-2mm}
+\begin{itemize}
+    \itemsep0em
+    \item Developed and maintained a number of Android mobile applications for several high profile clients.
+\end{itemize}
+
+\textbf{ADAPT Research Centre}, Trinity College, Dublin \hfill \textit{(Summer 2015)}\\
+\textit{Software Development and Research Intern}
+\vspace{-2mm}
+\begin{itemize}
+    \itemsep0em
+    \item Developed a web based application that visualises and simulates the enactment of students of personalised learning courses.
+\end{itemize}
+
+\textbf{Trinity Foundation}, Trinity College, Dublin \hfill \textit{(December 2014 - April 2016)}\\
+\textit{Data Entry Assistant}
+\vspace{-2mm}
+\begin{itemize}
+    \itemsep0em
+    \item Responsible for performing updates on the database to maintain its accuracy.
+\end{itemize}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \resheading{Other Experience}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \textbf{Trinity FM}, Trinity College, Dublin \hfill \textit{(October 2014 - Present)}\\
+% \textit{Radio Show Host}
+% \begin{itemize}
+%     \itemsep0em
+%     \item Hosted a talk and music radio show.
+%     \item Planned each show including a playlist and topics for discussion.
+%     \item Managed social media.
+% \end{itemize}
+
+\vspace{-5mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{\textbf{Projects} \hfill github.com/osulld13}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Trinity Library Digital Collections Mobile Application}, Final Year Project \hfill \textit{(2016)}\\
+\vspace{-2mm}
+\begin{itemize}
+    \itemsep0em
+    \item An Android mobile application for viewing and exploring Trinity Library's collections of digitized documents.
+\end{itemize}
+
+
+%\textbf{Machine Translation Repository}, Management Team \hfill \textit{(2015)}\\
+%\vspace{-2mm}
+%\begin{itemize}
+%    \itemsep0em
+%    \item A web application for running machine translation competitions.
+%    \item Built using the Django web framework.
+%\end{itemize}
+
+\vspace{-5mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{\textbf{Skills}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Proficient:} JavaScript, Java, Android Development, Git, IntelliJ\\
+\textbf{Familiar:} C, Python, JQuery, HTML, CSS, SQL\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{\textbf{Referees}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Dermot Daly}\\
+Tapadoo, 27-28 Strand Street Great, North City, Dublin 1\\
+\textit{dermdaly@tapadoo.com}
+
+\end{document}
